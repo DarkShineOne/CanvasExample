@@ -43,9 +43,9 @@ function generateHoles() {
 
 function drawBackground() {
 
-    const gradient = firstContext.createLinearGradient(0, 0, 0, firstCanvas.height);
-    gradient.addColorStop(0, '#1b1830');
-    gradient.addColorStop(1, "#554190");
+    const gradient = firstContext.createLinearGradient(0, firstCanvas.height, firstCanvas.width/3-100, 0);
+    gradient.addColorStop(0.6, '#1b1830');
+    gradient.addColorStop(0, "#554190");
 
     firstContext.fillStyle = gradient;
     firstContext.fillRect(0, 0, firstCanvas.width, firstCanvas.height);
