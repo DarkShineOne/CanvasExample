@@ -4,7 +4,7 @@ const firstContext = firstCanvas.getContext('2d');
 const secondCanvas = document.getElementById('second');
 const secondContext = secondCanvas.getContext('2d');
 
-const spacing = 20;
+const spacing = 12;
 const holes = [];
 
 function resizeCanvas() {
@@ -36,7 +36,7 @@ function generateHoles() {
 
     for (let y = spacing; y < firstCanvas.height; y += spacing) {
         for (let x = spacing; x < firstCanvas.width; x += spacing) {
-            holes.push({ x: x, y: y, r: 0.8 });
+            holes.push({ x: x, y: y, r: 0.65 });
         }
     }
 }
@@ -62,7 +62,7 @@ function animate() {
     secondContext.clearRect(0, 0, secondCanvas.width, secondCanvas.height);
     secondContext.beginPath();
     secondContext.arc(mouse.x, mouse.y, 80, 0, Math.PI * 2);
-    secondContext.fillStyle = '#a7e3ff';
+    secondContext.fillStyle = '#6063e8';
     secondContext.fill();
     secondContext.closePath();
 
