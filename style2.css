@@ -1,8 +1,6 @@
 body {
     background: 
-    /* Точечная сетка (поверх градиента) */
     radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px) repeat,
-    /* Основной градиент */
     radial-gradient(circle at bottom left, rgb(70, 54, 124) 0%, rgb(42, 34, 74) 50%) no-repeat fixed;
     background-size: 15px 15px, cover;
 }
