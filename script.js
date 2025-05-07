@@ -4,7 +4,7 @@ const firstContext = firstCanvas.getContext('2d');
 const secondCanvas = document.getElementById('second');
 const secondContext = secondCanvas.getContext('2d');
 
-const spacing = 3;
+const spacing = 20;
 const holes = [];
 
 function resizeCanvas() {
@@ -36,7 +36,7 @@ function generateHoles() {
 
     for (let y = spacing; y < firstCanvas.height; y += spacing) {
         for (let x = spacing; x < firstCanvas.width; x += spacing) {
-            holes.push({ x: x, y: y, r: 1 });
+            holes.push({ x: x, y: y, r: 0.8 });
         }
     }
 }
@@ -44,8 +44,8 @@ function generateHoles() {
 function drawBackground() {
 
     const gradient = firstContext.createLinearGradient(0, 0, 0, firstCanvas.height);
-    gradient.addColorStop(0, 'blue');
-    gradient.addColorStop(1, 'cyan');
+    gradient.addColorStop(0, '#1b1830');
+    gradient.addColorStop(1, "#554190");
 
     firstContext.fillStyle = gradient;
     firstContext.fillRect(0, 0, firstCanvas.width, firstCanvas.height);
@@ -61,8 +61,8 @@ function drawBackground() {
 function animate() {
     secondContext.clearRect(0, 0, secondCanvas.width, secondCanvas.height);
     secondContext.beginPath();
-    secondContext.arc(mouse.x, mouse.y, 30, 0, Math.PI * 2);
-    secondContext.fillStyle = 'red';
+    secondContext.arc(mouse.x, mouse.y, 80, 0, Math.PI * 2);
+    secondContext.fillStyle = '#a7e3ff';
     secondContext.fill();
     secondContext.closePath();
 
